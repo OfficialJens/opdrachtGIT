@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Index</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            // 1
+            let voornaam = prompt("Wat is je Voornaam?");
+            let achternaam = prompt("Wat is je Achternaam?");
+
+            // 2
+            let volledigeNaam = (`${voornaam} ${achternaam}`);
+
+            // 3
+            const filename = "javaScriptFrameWork";
+
+            // 4
+            let filenameKleinLetters = filename.toLocaleLowerCase();
+
+            // 5
+            let jsfD1 = filenameKleinLetters.substring(0, 10);
+            let jsfD2 = filenameKleinLetters.substring(10, 19);
+
+            // 6
+            let Char5 = filenameKleinLetters.charAt(5);
+
+            // 7
+            const email = "jan.klaassen@mail.com";
+            let AtLocation = email.indexOf("@");
+
+            // 8
+            let name = '';
+            if (email.indexOf('@') !== -1) {
+                name = email.split('@')[0];
+            }
+
+            // 9
+            const text = "Deze tekst is te lang en zal worden afgekapt op 8 tekens m.b.v. substr()";
+            let verkort = text.substr(0, 8);
+
+            // Scherm Afdruk
+
+            document.write(`<h1>Hallo, ${volledigeNaam}!</h1>`);
+            document.write(`<p>Jouw naam bevat ${(volledigeNaam.length -1)} karakters.</p>`);
+            document.write(`<p>De originele filename is: '${filename}'.</p>`);
+            document.write(`<p>De filename kan beter in kleine letters getypt worden, dus: '${filenameKleinLetters}'.</p>`);
+            document.write(`<p>Als je '${filename}' opsplitst, krijg je: '${jsfD1}' en '${jsfD2}'.`);
+            document.write(`<p>Het zesde karakter (volgens mensen)  in '${filenameKleinLetters}' is: '${Char5}'.</p>`);
+
+            document.write(`<p>In '${email}' staat de @ op positie: '${AtLocation}'.</p>`);
+
+            document.write(`<p>De naam is dus: '${name}'.</p>`);
+
+            document.write(`<p>De originele tekst: '${text}' wordt dan: '${verkort}'</p>`);
+
+        </script>
+    </body>
+</html>

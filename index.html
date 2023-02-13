@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Opdracht: Arrays</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script>
+
+            document.write("================================")
+
+            // Deel 1
+
+            const array1 = ["januari", "februari", "maart"];
+            const zoekMaand = ["March"];
+            let positieMaand = zoekMaand.indexOf("march");
+
+            array1[3] = "april";
+            array1[4] = "mei";
+            array1[5] = "juni";
+
+            array1.push("juli");
+            array1.push("augustus", "september", "oktober", "november", "december");
+
+            document.write(`<p>${array1}</p>`);
+            document.write(`<p>Er zijn ${array1.length} maanden in de array.</p>`);
+            document.write(`<p>De maand ${zoekMaand} bevindt zich in de array op positie: ${positieMaand}.</p>`);
+
+            document.write("================================")
+
+            // Deel 2
+            
+            const array2 = ["Erik", "Sofie", "Adam", "Zorro"];
+            let zoekNaam = prompt("Welke naam wil je zoeken?");
+            let positieNaam = array2.indexOf(zoekNaam);
+
+            array2.sort();
+
+            document.write(`<p>De gesorteerde namen zijn: ${array2}</p>`);
+            document.write(`<p>De naam ${zoekNaam} bevindt zich op positie: ${positieNaam}.</p>`);
+
+            document.write("================================")
+
+            let voornaamAchternaam = prompt("Wat is je volledige naam?");
+            const array3 = voornaamAchternaam.split(" ");
+            const reversed = array3.reverse();
+            const end = reversed.toString();
+
+            document.write(`<p>${end}</p>`);
+
+            document.write("================================")
+        </script>
+    </body>
+</html>
